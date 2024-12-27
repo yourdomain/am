@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Co-operative Associations</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.70/pdfmake.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.70/vfs_fonts.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Co-operative Associations Management</h1>
+        <div id="breadcrumb"></div>
+    </header>
+    <main>
+        <!-- Associations Section -->
+        <section id="associations-section">
+            <h2>Associations</h2>
+            <button id="add-association-btn">Add Association</button>
+            <button id="export-all-btn">Export All</button>
+            <button id="import-all-btn">Import All</button>
+            <input type="file" id="import-all-file" class="hidden">
+            <input type="text" id="search-association" placeholder="Search associations...">
+            <ul id="associations-list"></ul>
+        </section>
+
+        <!-- Association Form Section -->
+        <section id="association-form-section" class="hidden">
+            <h3>Add/Edit Association</h3>
+            <form id="association-form">
+                <input type="hidden" id="association-id">
+                <label>Name: <input type="text" id="association-name" required></label><br>
+                <label>Registration Number: <input type="text" id="association-reg" required></label><br>
+                <label>Address: <input type="text" id="association-address" required></label><br>
+                <label>Photo: <input type="file" id="association-photo"></label><br>
+                <button type="button" id="save-association">Save</button>
+                <button type="button" id="cancel-association">Cancel</button>
+            </form>
+        </section>
+
+        <!-- Members Section -->
+        <section id="members-section" class="hidden">
+            <h2 id="members-section-title"></h2>
+            <button id="back-to-associations">Back to Associations</button>
+            <button id="add-member-btn">Add Member</button>
+            <input type="text" id="search-member" placeholder="Search members...">
+            <ul id="members-list"></ul>
+        </section>
+
+        <!-- Member Form Section -->
+        <section id="member-form-section" class="hidden">
+            <h2 id="section-title"></h2>
+            <button id="back-to-members">Back to Members</button>
+            <h3>Add/Edit Member</h3>
+            <form id="member-form">
+                <input type="hidden" id="member-id">
+                <label>Name: <input type="text" id="member-name" required></label><br>
+                <label>Admission Number: <input type="text" id="member-admission" required></label><br>
+                <label>Father's Name: <input type="text" id="member-father" required></label><br>
+                <label>Address: <input type="text" id="member-address" required></label><br>
+                <label>Community: <input type="text" id="member-community" required></label><br>
+                <label>Gender:
+                    <select id="member-gender" required>
+                        <option value="">Select Gender</option>
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                    </select>
+                </label><br><br>
+                <label>Photo: <input type="file" id="member-photo"></label><br>
+                <button type="button" id="save-member">Save</button>
+                <button type="button" id="cancel-member">Cancel</button>
+            </form>
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

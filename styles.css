@@ -1,0 +1,234 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+header {
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+
+#breadcrumb {
+    text-align: center;
+    margin-top: 0.5rem;
+    font-size: 1rem;
+    color: white;
+}
+
+main {
+    padding: 1rem 2rem;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 0.5rem 0;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+.hidden {
+    display: none;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    margin: 0.5rem 0;
+    padding: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+input {
+    width: 100%;
+    margin: 0.5rem 0;
+    padding: 0.5rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.thumbnail {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 5px;
+  width: 100px;
+}
+
+/* Card layout for associations */
+.association-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1rem 0;
+    padding: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.association-details {
+    display: flex;
+    align-items: center;
+    flex: 2;
+}
+
+.association-thumbnail {
+    width: 80px;
+    height: 80px;
+    border-radius: 8px;
+    object-fit: cover;
+    margin-right: 1rem;
+    border: 1px solid #ccc;
+}
+
+.association-info h3 {
+    margin: 0;
+    font-size: 1.25rem;
+    color: #333;
+}
+
+.association-info p {
+    margin: 0.2rem 0;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.association-actions {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    flex: 1;
+    justify-content: flex-end;
+}
+
+.association-actions button {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.85rem;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.association-actions button:hover {
+    background-color: #45a049;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    .association-card {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .association-actions {
+        justify-content: flex-start;
+        flex-wrap: wrap;
+    }
+
+    .association-actions button {
+        margin-bottom: 0.5rem;
+    }
+}
+
+/* Card layout for members */
+.member-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1rem 0;
+    padding: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.member-details {
+    display: flex;
+    align-items: center;
+    flex: 2;
+}
+
+.member-thumbnail {
+    width: 110px;
+    height: 110px;
+    border-radius: 8px;
+    object-fit: cover;
+    margin-right: 1rem;
+    border: 1px solid #ccc;
+}
+
+.member-info h3 {
+    margin: 0;
+    font-size: 1.25rem;
+    color: #333;
+}
+
+.member-info p {
+    margin: 0.2rem 0;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.member-actions {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    flex: 1;
+    justify-content: flex-end;
+}
+
+.member-actions button {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.85rem;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.member-actions button:hover {
+    background-color: #45a049;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    .member-card {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .member-actions {
+        justify-content: flex-start;
+        flex-wrap: wrap;
+    }
+
+    .member-actions button {
+        margin-bottom: 0.5rem;
+    }
+}
